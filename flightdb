@@ -1,0 +1,119 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.1.53-community
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema flights
+--
+
+CREATE DATABASE IF NOT EXISTS flights;
+USE flights;
+
+--
+-- Definition of table `flight`
+--
+
+DROP TABLE IF EXISTS `flight`;
+CREATE TABLE `flight` (
+  `ID` int(11) NOT NULL,
+  `code` varchar(10) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `departureDate` date DEFAULT NULL,
+  `origin` varchar(30) DEFAULT NULL,
+  `destination` varchar(30) DEFAULT NULL,
+  `emptySeats` int(11) DEFAULT NULL,
+  `planetype` varchar(10) DEFAULT NULL,
+  `totalseats` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `flight`
+--
+
+/*!40000 ALTER TABLE `flight` DISABLE KEYS */;
+INSERT INTO `flight` (`ID`,`code`,`price`,`departureDate`,`origin`,`destination`,`emptySeats`,`planetype`,`totalseats`) VALUES 
+ (1,'S3dt',400,'2017-03-24','MUA','SER',0,'boeing 383',150);
+/*!40000 ALTER TABLE `flight` ENABLE KEYS */;
+
+
+--
+-- Definition of table `flight123`
+--
+
+DROP TABLE IF EXISTS `flight123`;
+CREATE TABLE `flight123` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `code` varchar(10) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `departureDate` date DEFAULT NULL,
+  `origin` varchar(30) DEFAULT NULL,
+  `destination` varchar(30) DEFAULT NULL,
+  `emptySeats` int(11) DEFAULT NULL,
+  `planetype` varchar(10) DEFAULT NULL,
+  `totalseats` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `flight123`
+--
+
+/*!40000 ALTER TABLE `flight123` DISABLE KEYS */;
+/*!40000 ALTER TABLE `flight123` ENABLE KEYS */;
+
+
+--
+-- Definition of table `flight1234`
+--
+
+DROP TABLE IF EXISTS `flight1234`;
+CREATE TABLE `flight1234` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `code` varchar(10) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `origin` varchar(30) DEFAULT NULL,
+  `destination` varchar(30) DEFAULT NULL,
+  `emptySeats` int(11) DEFAULT NULL,
+  `planetype` varchar(10) DEFAULT NULL,
+  `totalseats` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `flight1234`
+--
+
+/*!40000 ALTER TABLE `flight1234` DISABLE KEYS */;
+INSERT INTO `flight1234` (`ID`,`code`,`price`,`origin`,`destination`,`emptySeats`,`planetype`,`totalseats`) VALUES 
+ (1,'S3dt',400,'MUA','SER',0,'boeing 777',400),
+ (2,'ghjt',400,'MUA','SER',10,'boeing 666',400),
+ (7,'hhthg',700,'MUA','SER',0,'boeing 675',400),
+ (8,'ER38sd',400,'MUA','SFO',0,'Boeing 737',150),
+ (14,'ER38sd',400,'MUA','SFO',0,'Boeing 737',150),
+ (16,'hhthg',700,'MUA','SER',0,'boeing 675',400),
+ (18,'abc',500,'MUA','ghj',0,'boeing 555',330);
+/*!40000 ALTER TABLE `flight1234` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
